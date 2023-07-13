@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+}
+#body{
+    background-color:rgb(196, 193, 189)
+}
+nav > ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #cecece;
+}
+nav > ul li{
+    padding: 20px;
+}
+
+nav .dropdown{
+    display: none;
+}
+
+li:hover .dropdown{
+    list-style: none;
+    display: grid;
+    border:solid 1px #cecece;
+}
+li:hover .dropdown li:hover{
+    border-top:solid 1px rgb(93, 93, 134);
+    border-bottom:solid 1px rgb(93, 93, 134);
+}
+li:hover .dropdown li  {
+    border-top: solid 1px #ffffff28;
+    border-bottom: solid 1px #cecece;
+    padding: 10px 20px;
+    color:rgb(100, 100, 211);
+    }
+li:hover .dropdown a { 
+    text-decoration: none;
+}
+form{
+    position: absolute;
+    top:10px;
+    left: 500px;
+}
+#heading{
+    text-align: center;
+    padding-top:40px;
+    padding-bottom: 40px;
+    animation: heading 2s alternate-reverse  infinite;
+}
+.image{
+    padding:0;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: grid;
+    position: relative;
+    left: 150px;
+    width:100px;
+}
+.image-s{
+    animation: image;
+    animation: heading 2s alternate-reverse  infinite;
+    position: relative;
+    left:165px;
+    padding-bottom: 20px;
+}
+#img{
+    position: relative;
+    left: 0;
+    height: 60px;
+    margin: 0;
+}
+
+#one{
+    background-image: url(/download.jpeg);
+    background-size: cover;
+}
+.container{
+    display: flex;
+    column-gap: 5px;
+}
+.container > div{
+    border: 1px solid black;
+}
+@keyframes heading{
+    0%{
+        transform:translate(0);
+        text-decoration: underline;
+    }
+    50%{
+        transform: translate(50px);
+        text-decoration: line-through;
+    }
+}
+@keyframes image{
+    from{
+        transform:translate(0);
+    }to{
+        transform: translate(50px);
+    }
+}
+@media screen and (max-width:500px) {
+     nav > ul {
+        display: grid;
+        justify-content: center;
+    }
+    .content{
+        width:360px;
+    }
+    #heading{
+        text-align:center;
+    }
+    img{
+        position: relative;
+        left:2px;
+    }
+ }
+ @media screen and (min-width:1000px) {
+    img {
+        position: relative;
+        left:200px;
+    }
+    .content{
+        width:970px;
+    }
+ }
+ @media screen and (min-width:1240px) {
+ img {
+        position: relative;
+        left:350px;
+    }
+ .content{
+        width:1290px;
+    }
+ }
